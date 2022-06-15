@@ -246,3 +246,32 @@ address.latitude(); // => "8.7864"
 address.latitude(); // '-30.9501'
 address.latitude(10, -10, 5); // '2.68452'
 ```
+
+## Longitude
+
+Generates a random longitude.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| max | number | `180` | The upper bound for the longitude to generate. |
+| min | number | `-180` | The lower bound for the longitude to generate. |
+| precision | number | `4` | The number of decimal points of precision for the longitude. |
+
+**Returns:** string
+
+```ts
+// longitude function
+address.longitude(max: number = 180, min: number = -180, precision: number = 4): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.longitude(); // => "17.5729"
+address.longitude(); // '-154.0226'
+address.longitude(10, -10, 5); // '-4.03620'
+```
