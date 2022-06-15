@@ -40,9 +40,38 @@ address.buildingNumber(): string
 
 // import
 import { useFaker } from 'next-faker';
+
 const { address } = useFaker();
 
 // usage
 address.buildingNumber(); // => "5786"
 address.buildingNumber(); // '379'
+```
+
+## Cardinal Direction
+
+Returns a random cardinal direction (north, east, south, west).
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| useAbbr | boolean | `false` | If true this will return abbreviated directions (N, E, etc). Otherwise this will return the long name. |
+
+**Returns:** string
+
+```ts
+// cardinalDirection function
+address.cardinalDirection(useAbbr: boolean = false): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.cardinalDirection(); // => "South"
+address.cardinalDirection(); // 'North'
+address.cardinalDirection(false); // 'South'
+address.cardinalDirection(true); // 'N'
 ```
