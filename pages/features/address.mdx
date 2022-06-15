@@ -75,3 +75,29 @@ address.cardinalDirection(); // 'North'
 address.cardinalDirection(false); // 'South'
 address.cardinalDirection(true); // 'N'
 ```
+
+## City
+
+Generates a random localized city name.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| format? | number | string |  | The index of the format to use. Deprecated do not use. |
+
+**Returns:** string
+
+```ts
+// city function
+address.city(format?: number | string): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.city(); // => "Larrymouth"
+address.city(); // 'East Jarretmouth'
+```
