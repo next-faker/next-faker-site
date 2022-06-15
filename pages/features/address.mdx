@@ -190,7 +190,7 @@ address.county(); // => "Borders"
 address.county(); // 'Cambridgeshire'
 ```
 
-## Country Code
+## Direction
 
 Returns a random direction (cardinal and ordinal; northwest, east, etc).
 
@@ -216,4 +216,33 @@ address.direction(); // => "Northeast"
 address.direction(); // 'Northeast'
 address.direction(false); // 'South'
 address.direction(true); // 'NE'
+```
+
+## Latitude
+
+Generates a random latitude.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| max | number | `90` | The upper bound for the latitude to generate. |
+| min | number | `-90` | The lower bound for the latitude to generate. |
+| precision | number | `4` | The number of decimal points of precision for the latitude. |
+
+**Returns:** string
+
+```ts
+// latitude function
+address.latitude(max: number = 90, min: number = -90, precision: number = 4): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.latitude(); // => "8.7864"
+address.latitude(); // '-30.9501'
+address.latitude(10, -10, 5); // '2.68452'
 ```
