@@ -1,4 +1,7 @@
-# [Nextra](https://nextra.vercel.app)
+# next-faker
+
+
+<!-- # [Nextra](https://nextra.vercel.app)
 
 _Warning: this project is not production ready, API might change without notice._
 
@@ -19,4 +22,4 @@ The code of Nextra is under the [`core`](https://github.com/shuding/nextra/tree/
 
 ---
 
-Created by [@shuding](https://github.com/shuding) and [@pacocoursey](https://github.com/pacocoursey) at [Vercel](https://vercel.com). Released under the MIT license.
+Created by [@shuding](https://github.com/shuding) and [@pacocoursey](https://github.com/pacocoursey) at [Vercel](https://vercel.com). Released under the MIT license. -->
