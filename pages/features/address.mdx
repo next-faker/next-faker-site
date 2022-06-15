@@ -164,8 +164,28 @@ import { useFaker } from 'next-faker';
 const { address } = useFaker();
 
 // usage
-address.countryCode() // => "MA"
-address.countryCode() // 'SJ'
-address.countryCode('alpha-2') // 'GA'
-address.countryCode('alpha-3') // 'TJK'
+address.countryCode(); // => "MA"
+address.countryCode(); // 'SJ'
+address.countryCode('alpha-2'); // 'GA'
+address.countryCode('alpha-3'); // 'TJK'
+```
+
+## County
+
+Returns a random localized county.
+
+**Returns:** string
+
+```ts
+// county function
+address.county(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.county(); // => "Borders"
+address.county(); // 'Cambridgeshire'
 ```
