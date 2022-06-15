@@ -189,3 +189,31 @@ const { address } = useFaker();
 address.county(); // => "Borders"
 address.county(); // 'Cambridgeshire'
 ```
+
+## Country Code
+
+Returns a random direction (cardinal and ordinal; northwest, east, etc).
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| useAbbr | boolean | `false` | If true this will return abbreviated directions (NW, E, etc). Otherwise this will return the long name. |
+
+**Returns:** string
+
+```ts
+// direction function
+address.direction(useAbbr: boolean = false): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.direction(); // => "Northeast"
+address.direction(); // 'Northeast'
+address.direction(false); // 'South'
+address.direction(true); // 'NE'
+```
