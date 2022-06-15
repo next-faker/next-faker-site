@@ -353,3 +353,23 @@ const { address } = useFaker();
 address.secondaryAddress(); // => "Suite 578"
 address.secondaryAddress(); // 'Apt. 861'
 ```
+
+## State
+
+Returns a random localized state from this country.
+
+**Returns:** string
+
+```ts
+// state function
+address.state(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.state(); // => "Nevada"
+address.state(); // 'Georgia'
+```
