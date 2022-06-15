@@ -373,3 +373,23 @@ const { address } = useFaker();
 address.state(); // => "Nevada"
 address.state(); // 'Georgia'
 ```
+
+## State Abbr
+
+Returns a random localized state's abbreviated name from this country.
+
+**Returns:** string
+
+```ts
+// stateAbbr function
+address.stateAbbr(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.stateAbbr(); // => "NV"
+address.stateAbbr(); // 'ND'
+```
