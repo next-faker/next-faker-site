@@ -1,0 +1,48 @@
+# Address
+
+Module to generate addresses and locations.
+
+* Building Number
+* Cardinal Direction
+* City
+* City Name
+* City Prefix
+* City Suffix
+* Country
+* Country Code
+* County
+* Direction
+* Latitude
+* Longitude
+* Nearby GPSCoordinate
+* Ordinal Direction
+* Secondary Address
+* State
+* State Abbr
+* Street
+* Street Address
+* Street Name
+* Street Prefix
+* Street Suffix
+* Time Zone
+* Zip Code
+* Zip Code By State
+
+## Building Number
+
+Generates a random building number.
+
+**Returns:** string
+
+```ts
+// buildingNumber function
+address.buildingNumber(): string
+
+// import
+import { useFaker } from 'next-faker';
+const { address } = useFaker();
+
+// usage
+address.buildingNumber(); // => "5786"
+address.buildingNumber(); // '379'
+```
