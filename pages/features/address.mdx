@@ -109,7 +109,7 @@ Returns a random localized and existing city name.
 **Returns:** string
 
 ```ts
-// city function
+// cityName function
 address.cityName(): string
 
 // import
@@ -120,4 +120,24 @@ const { address } = useFaker();
 // usage
 address.cityName(); // => "Menifee"
 address.cityName(); // 'San Rafael'
+```
+
+## Country
+
+Returns a random country name.
+
+**Returns:** string
+
+```ts
+// country function
+address.country(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.country(); // => "Malta"
+address.country(); // 'Greece'
 ```
