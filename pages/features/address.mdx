@@ -548,3 +548,30 @@ address.zipCode(); // => "57868-5846"
 address.zipCode(); // '17839'
 address.zipCode('####'); // '6925'
 ```
+
+## Zip Code By State
+
+Generates random zip code from state abbreviation. If state abbreviation is not specified, a random zip code is generated according to the locale's zip format. Only works for locales with postcode_by_state definition. If a locale does not have a postcode_by_state definition, a random zip code is generated according to the locale's zip format.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| state | string |  | The abbreviation of the state to generate the zip code for. |
+
+**Returns:** string
+
+```ts
+// zipCodeByState function
+address.zipCodeByState(state: string): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.zipCodeByState(); // => "57868-5846"
+address.zipCodeByState("AK"); // '99595'
+address.zipCodeByState("??"); // '47683-9880'
+```
