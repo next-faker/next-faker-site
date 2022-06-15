@@ -84,7 +84,7 @@ Generates a random localized city name.
 
 | Name | Type | Default | Description |
 | :------- | :------- | :------- | :------- |
-| format? | number | string |  | The index of the format to use. Deprecated do not use. |
+| format? | number \| string |  | The index of the format to use. Deprecated do not use. |
 
 **Returns:** string
 
@@ -140,4 +140,32 @@ const { address } = useFaker();
 // usage
 address.country(); // => "Malta"
 address.country(); // 'Greece'
+```
+
+## Country Code
+
+Returns a random country code.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| alphaCode | 'alpha-2' \| 'alpha-3' | `'alpha-2'` | The code to return. Can be either `'alpha-2'` (2 letter code) or `'alpha-3'` (three letter code). |
+
+**Returns:** string
+
+```ts
+// countryCode function
+address.countryCode(alphaCode: 'alpha-2' | 'alpha-3' = 'alpha-2'): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.countryCode() // => "MA"
+address.countryCode() // 'SJ'
+address.countryCode('alpha-2') // 'GA'
+address.countryCode('alpha-3') // 'TJK'
 ```
