@@ -481,3 +481,23 @@ const { address } = useFaker();
 address.streetPrefix(); // => "b"
 address.streetPrefix(); // 'Boame'
 ```
+
+## Street Suffix
+
+Returns a random localized street suffix.
+
+**Returns:** string
+
+```ts
+// streetSuffix function
+address.streetSuffix(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.streetSuffix(); // => "Orchard"
+address.streetSuffix(); // 'Streets'
+```
