@@ -101,3 +101,23 @@ const { address } = useFaker();
 address.city(); // => "Larrymouth"
 address.city(); // 'East Jarretmouth'
 ```
+
+## City Name
+
+Returns a random localized and existing city name.
+
+**Returns:** string
+
+```ts
+// city function
+address.cityName(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.cityName(); // => "Menifee"
+address.cityName(); // 'San Rafael'
+```
