@@ -393,3 +393,23 @@ const { address } = useFaker();
 address.stateAbbr(); // => "NV"
 address.stateAbbr(); // 'ND'
 ```
+
+## Street
+
+Generates a random localized street name.
+
+**Returns:** string
+
+```ts
+// street function
+address.street(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.street(); // => "Medhurst Road"
+address.street(); // 'Schroeder Isle'
+```
