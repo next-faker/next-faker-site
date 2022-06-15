@@ -305,3 +305,31 @@ address.nearbyGPSCoordinate(); // [ '33.8475', '-170.5953' ]
 address.nearbyGPSCoordinate([33, -170]); // [ '33.0165', '-170.0636' ]
 address.nearbyGPSCoordinate([33, -170], 1000, true); // [ '37.9163', '-179.2408' ]
 ```
+
+## Ordinal Direction
+
+Returns a random ordinal direction (northwest, southeast, etc).
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| useAbbr | boolean | `false` | If true this will return abbreviated directions (NW, SE, etc). Otherwise this will return the long name. |
+
+**Returns:** string
+
+```ts
+// ordinalDirection function
+address.ordinalDirection(useAbbr: boolean = false): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.ordinalDirection(); // => "Southeast"
+address.ordinalDirection(); // 'Northeast'
+address.ordinalDirection(false); // 'Northwest'
+address.ordinalDirection(true); // 'NE'
+```
