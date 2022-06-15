@@ -521,3 +521,30 @@ const { address } = useFaker();
 address.timeZone(); // => "Asia/Riyadh"
 address.timeZone(); // 'Pacific/Guam'
 ```
+
+## Zip Code
+
+Generates random zip code from specified format. If format is not specified, the locale's zip format is used.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| format? | string |  | The optional format used to generate the the zip code. By default, a random format is used from the locale zip formats. |
+
+**Returns:** string
+
+```ts
+// zipCode function
+address.zipCode(format?: string): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { address } = useFaker();
+
+// usage
+address.zipCode(); // => "57868-5846"
+address.zipCode(); // '17839'
+address.zipCode('####'); // '6925'
+```
