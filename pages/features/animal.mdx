@@ -64,7 +64,7 @@ Returns a random cat breed.
 **Returns:** string
 
 ```ts
-// bird function
+// cat function
 animal.cat(): string
 
 // import
@@ -75,4 +75,24 @@ const { animal } = useFaker();
 // usage
 animal.cat(); // => "Norwegian Forest Cat"
 animal.cat(); // 'Singapura'
+```
+
+## Cetacean
+
+Returns a random cetacean species.
+
+**Returns:** string
+
+```ts
+// cetacean function
+animal.cetacean(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { animal } = useFaker();
+
+// usage
+animal.cetacean(); // => "Fraser’s Dolphin"
+animal.cetacean(); // 'Spinner Dolphin'
 ```
