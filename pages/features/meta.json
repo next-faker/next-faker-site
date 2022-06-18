@@ -1,5 +1,6 @@
 {
   "address": "Address",
   "animal": "Animal",
-  "color": "Color"
+  "color": "Color",
+  "commerce": "Commerce"
 }
