@@ -1,0 +1,338 @@
+# Color
+
+Module to generate colors.
+
+* Cmyk
+* Color By CSSColor Space
+* Css Supported Function
+* Css Supported Space
+* Hsl
+* Human
+* Hwb
+* Lab
+* Lch
+* Rgb
+* Space
+
+## Cmyk
+
+Returns a CMYK color.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| options? | \{ ... \} |  | Options object. |
+| options.format? | ColorFormat | `'decimal'` | Format of generated CMYK color. |
+
+**Returns:** number[] | string
+
+```ts
+// cmyk function
+color.cmyk(options?: {
+  format: ColorFormat
+}): string | number[]
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.cmyk(); // => [0.55,0.59,0.72,0.85]
+color.cmyk(); // [0.31, 0.52, 0.32, 0.43]
+color.cmyk({ format: 'decimal' }); // [0.31, 0.52, 0.32, 0.43]
+color.cmyk({ format: 'css' }); // cmyk(100%, 0%, 0%, 0%)
+color.cmyk({ format: 'binary' }); // (8-32 bits) x 4
+```
+
+## Color By CSSColor Space
+
+Returns a random color based on CSS color space specified.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| options? | \{ ... \} |  | Options object. |
+| options.format? | ColorFormat | `'decimal'` | Format of generated RGB color. |
+| options.space? | 'a98-rgb' \| 'display-p3' \| 'prophoto-rgb' \| 'rec2020' \| 'sRGB' | `'sRGB'` | Color space to generate the color for. |
+
+**Returns:** number[] | string
+
+```ts
+// colorByCSSColorSpace function
+color.colorByCSSColorSpace(options?: {
+  format: ColorFormat,
+  space: 'a98-rgb' | 'display-p3' | 'prophoto-rgb' | 'rec2020' | 'sRGB'
+}): string | number[]
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.colorByCSSColorSpace(); // => [0.5488,0.5929,0.7152]
+color.colorByCSSColorSpace(); // [0.93, 1, 0.82]
+color.colorByCSSColorSpace({ format: 'decimal' }); // [0.12, 0.21, 0.31]
+color.colorByCSSColorSpace({ format: 'css', space: 'display-p3' }); // color(display-p3 0.12 1 0.23)
+color.colorByCSSColorSpace({ format: 'binary' }); // (8-32 bits x 3)
+```
+
+## Css Supported Function
+
+Returns a random css supported color function name.
+
+**Returns:** string
+
+```ts
+// cssSupportedFunction function
+color.cssSupportedFunction(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.cssSupportedFunction(); // => "hwb"
+color.cssSupportedFunction(); // 'rgb'
+```
+
+## Css Supported Space
+
+Returns a random css supported color space name.
+
+**Returns:** string
+
+```ts
+// cssSupportedSpace function
+color.cssSupportedSpace(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.cssSupportedSpace(); // => "a98-rgb"
+color.cssSupportedSpace(); // 'display-p3'
+```
+
+## Hsl
+
+Returns an HSL color.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| options? | \{ ... \} |  | Options object. |
+| options.format? | ColorFormat | `'decimal'` | Format of generated HSL color. |
+| options.includeAlpha? | boolean | `false` | Adds an alpha value to the color (RGBA). |
+
+**Returns:** number[] | string
+
+```ts
+// hsl function
+color.hsl(options?: {
+  format: ColorFormat,
+  includeAlpha: boolean
+}): string | number[]
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.hsl(); // => [198,0.59,0.72]
+color.hsl(); // [201, 0.23, 0.32]
+color.hsl({ format: 'decimal' }); // [300, 0.21, 0.52]
+color.hsl({ format: 'decimal', includeAlpha: true }); // [300, 0.21, 0.52, 0.28]
+color.hsl({ format: 'css' }); // hsl(0deg, 100%, 80%)
+color.hsl({ format: 'css', includeAlpha: true }); // hsl(0deg 100% 50% / 0.5)
+color.hsl({ format: 'binary' }); // (8-32 bits) x 3
+color.hsl({ format: 'binary', includeAlpha: true }); // (8-32 bits) x 4
+```
+
+## Human
+
+Returns a random human readable color name.
+
+**Returns:** string
+
+```ts
+// human function
+color.human(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.human(); // => "salmon"
+color.human(); // 'red'
+```
+
+## Hwb
+
+Returns an HWB color.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| options? | \{ ... \} |  | Options object. |
+| options.format? | ColorFormat | `'decimal'` | Format of generated RGB color. |
+
+**Returns:** number[] | string
+
+```ts
+// hwb function
+color.hwb(options?: {
+  format: ColorFormat
+}): string | number[]
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.hwb(); // => [198,0.59,0.72]
+color.hwb(); // [201, 0.21, 0.31]
+color.hwb({ format: 'decimal' }); // [201, 0.21, 0.31]
+color.hwb({ format: 'css' }); // hwb(194 0% 0%)
+color.hwb({ format: 'binary' }); // (8-32 bits x 3)
+```
+
+## Lab
+
+Returns a LAB (CIELAB) color.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| options? | \{ ... \} |  | Options object. |
+| options.format? | ColorFormat | `'decimal'` | Format of generated RGB color. |
+
+**Returns:** number[] | string
+
+```ts
+// lab function
+color.lab(options?: {
+  format: ColorFormat
+}): string | number[]
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.lab(); // => [0.548814,18.5689,43.0379]
+color.lab(); // [0.832133, -80.3245, 100.1234]
+color.lab({ format: 'decimal' }); // [0.856773, -80.2345, 100.2341]
+color.lab({ format: 'css' }); // lab(29.2345% 39.3825 20.0664)
+color.lab({ format: 'binary' }); // (8-32 bits x 3)
+```
+
+## Lch
+
+Returns an LCH color. Even though upper bound of chroma in LCH color space is theoretically unbounded, it is bounded to 230 as anything above will not make a noticeable difference in the browser.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| options? | \{ ... \} |  | Options object. |
+| options.format? | ColorFormat | `'decimal'` | Format of generated RGB color. |
+
+**Returns:** number[] | string
+
+```ts
+// lch function
+color.lch(options?: {
+  format: ColorFormat
+}): string | number[]
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.lch(); // => [0.548814,136.4,164.5]
+color.lch(); // [0.522345, 72.2, 56.2]
+color.lch({ format: 'decimal' }); // [0.522345, 72.2, 56.2]
+color.lch({ format: 'css' }); // lch(52.2345% 72.2 56.2)
+color.lch({ format: 'binary' }); // (8-32 bits x 3)
+```
+
+## Rgb
+
+Returns an RGB color.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| options? | \{ ... \} |  | Options object. |
+| options.casing? | Casing | `'mixed'` | Letter type case of the generated hex color. Only applied when `'hex'` format is used. |
+| options.format? | 'hex' \| ColorFormat | `'hex'` | Format of generated RGB color. |
+| options.includeAlpha? | boolean | `false` | Adds an alpha value to the color (RGBA). |
+| options.prefix? | string | `'0x'` | Prefix of the generated hex color. Only applied when `'hex'` format is used. |
+
+**Returns:** number[] | string
+
+```ts
+// rgb function
+color.rgb(options?: {
+  casing: Casing,
+  format: 'hex' | ColorFormat,
+  includeAlpha: boolean,
+  prefix: string
+}): string | number[]
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.rgb(); // => "#cdfcdc"
+color.rgb(); // '0xffffFF'
+color.rgb({ prefix: '#' }); // '#ffffFF'
+color.rgb({ casing: 'upper' }); // '0xFFFFFF'
+color.rgb({ casing: 'lower' }); // '0xffffff'
+color.rgb({ prefix: '#', casing: 'lower' }); // '#ffffff'
+color.rgb({ format: 'hex', casing: 'lower' }); // '#ffffff'
+color.rgb({ format: 'decimal' }); // [255, 255, 255]
+color.rgb({ format: 'css' }); // 'rgb(255, 0, 0)'
+color.rgb({ format: 'binary' }); // '10000000 00000000 11111111'
+color.rgb({ format: 'decimal', includeAlpha: true }); // [255, 255, 255, 0.4]
+```
+
+## Space
+
+Returns a random color space name from the worldwide accepted color spaces. Source: [https://en.wikipedia.org/wiki/List_of_color_spaces_and_their_uses](https://en.wikipedia.org/wiki/List_of_color_spaces_and_their_uses)
+
+**Returns:** string
+
+```ts
+// space function
+color.space(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { color } = useFaker();
+
+// usage
+color.space() // => "sYCC"
+color.space() // 'sRGB'
+```
