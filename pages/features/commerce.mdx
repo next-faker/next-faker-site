@@ -1,0 +1,164 @@
+# Commerce
+
+Module to generate commerce and product related entries.
+
+* Department
+* Price
+* Product
+* Product Adjective
+* Product Description
+* Product Material
+* Product Name
+
+## Department
+
+Returns a department inside a shop.
+
+**Returns:** string
+
+```ts
+// department function
+commerce.department(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { commerce } = useFaker();
+
+// usage
+commerce.department() // => "Toys"
+commerce.department() // 'Garden'
+```
+
+## Price
+
+Generates a price between min and max (inclusive).
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| min | number | `1` | The minimum price. |
+| max | number | `1000` | The maximum price. |
+| dec | number | `2` | The number of decimal places. |
+| symbol | string | `''` | The currency value to use. |
+
+**Returns:** string
+
+```ts
+// price function
+commerce.price(min: number = 1, max: number = 1000, dec: number = 2, symbol: string = ''): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { commerce } = useFaker();
+
+// usage
+commerce.price(); // => "549.00"
+commerce.price(); // 828.00
+commerce.price(100); // 904.00
+commerce.price(100, 200); // 154.00
+commerce.price(100, 200, 0); // 133
+commerce.price(100, 200, 0, '$'); // $114
+```
+
+## Product
+
+Returns a short product name.
+
+**Returns:** string
+
+```ts
+// product function
+commerce.product(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { commerce } = useFaker();
+
+// usage
+commerce.product(); // => "Towels"
+commerce.product(); // 'Computer'
+```
+
+## Product Adjective
+
+Returns an adjective describing a product.
+
+**Returns:** string
+
+```ts
+// productAdjective function
+commerce.productAdjective(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { commerce } = useFaker();
+
+// usage
+commerce.productAdjective(); // => "Bespoke"
+commerce.productAdjective(); // 'Handcrafted'
+```
+
+## Product Description
+
+Returns a product description.
+
+**Returns:** string
+
+```ts
+// productDescription function
+commerce.productDescription(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { commerce } = useFaker();
+
+// usage
+commerce.productDescription(); // => "The Football Is Good For Training And Recreati...
+commerce.productDescription(); // 'Andy shoes are designed to keeping...'
+```
+
+## Product Material
+
+Returns a material of a product.
+
+**Returns:** string
+
+```ts
+// productMaterial function
+commerce.productMaterial(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { commerce } = useFaker();
+
+// usage
+commerce.productMaterial(); // => "Granite"
+commerce.productMaterial(); // 'Rubber'
+```
+
+## Product Name
+
+Generates a random descriptive product name.
+
+**Returns:** string
+
+```ts
+// productName function
+commerce.productName(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { commerce } = useFaker();
+
+// usage
+commerce.productName(); // => "Bespoke Rubber Fish"
+commerce.productName(); // 'Incredible Soft Gloves'
+```
