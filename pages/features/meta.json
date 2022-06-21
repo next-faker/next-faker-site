@@ -2,5 +2,6 @@
   "address": "Address",
   "animal": "Animal",
   "color": "Color",
-  "commerce": "Commerce"
+  "commerce": "Commerce",
+  "company": "Company"
 }
