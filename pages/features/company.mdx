@@ -1,0 +1,241 @@
+# Company
+
+Module to generate company related entries.
+
+* Bs
+* Bs Adjective
+* Bs Buzz
+* Bs Noun
+* Catch Phrase
+* Catch Phrase Adjective
+* Catch Phrase Descriptor
+* Catch Phrase Noun
+* Company Name
+* Company Suffix
+* Suffixes
+
+## Bs
+
+Generates a random company bs phrase.
+
+**Returns:** string
+
+```ts
+// bs function
+company.bs(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.bs(); // => "deliver distributed mindshare"
+company.bs(); // 'cultivate synergistic e-markets'
+```
+
+## Bs Adjective
+
+Returns a random company bs adjective.
+
+**Returns:** string
+
+```ts
+// bsAdjective function
+company.bsAdjective(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.bsAdjective(); // => "real-time"
+company.bsAdjective(); // 'one-to-one'
+```
+
+## Bs Buzz
+
+Returns a random company bs buzz word.
+
+**Returns:** string
+
+```ts
+// bsBuzz function
+company.bsBuzz(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.bsBuzz(); // => "deliver"
+company.bsBuzz(); // 'empower'
+```
+
+## Bs Noun
+
+Returns a random company bs noun.
+
+**Returns:** string
+
+```ts
+// bsNoun function
+company.bsNoun(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.bsNoun(); // => "architectures"
+company.bsNoun(); // 'paradigms'
+```
+
+## Catch Phrase
+
+Generates a random business catch phrase.
+
+**Returns:** string
+
+```ts
+// catchPhrase function
+company.catchPhrase(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.catchPhrase(); // => "Optimized maximized paradigm"
+company.catchPhrase(); // 'Upgradable systematic flexibility'
+```
+
+## Catch Phrase Adjective
+
+Returns a random catch phrase adjective.
+
+**Returns:** string
+
+```ts
+// catchPhraseAdjective function
+company.catchPhraseAdjective(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.catchPhraseAdjective(); // => "Optimized"
+company.catchPhraseAdjective(); // 'Multi-tiered'
+```
+
+## Catch Phrase Descriptor
+
+Returns a random catch phrase descriptor.
+
+**Returns:** string
+
+```ts
+// catchPhraseAdjective function
+company.catchPhraseDescriptor(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.catchPhraseDescriptor(); // => "intermediate"
+company.catchPhraseDescriptor(); // 'composite'
+```
+
+## Catch Phrase Noun
+
+Returns a random catch phrase noun.
+
+**Returns:** string
+
+```ts
+// catchPhraseNoun function
+company.catchPhraseNoun(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.catchPhraseNoun(); // => "knowledge user"
+company.catchPhraseNoun(); // 'leverage'
+```
+
+## Company Name
+
+Generates a random company name.
+
+### Parameters
+
+| Name | Type | Default | Description |
+| :------- | :------- | :------- | :------- |
+| format?	 | number |  | The optional format index used to select a format. |
+
+**Returns:** string
+
+```ts
+// companyName function
+company.companyName(format?: number): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.companyName(); // => "Medhurst - Ratke"
+company.companyName(); // 'Zieme, Hauck and McClure'
+```
+
+## Company Suffix
+
+Returns a random company suffix.
+
+**Returns:** string
+
+```ts
+// companySuffix function
+company.companySuffix(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.companySuffix(); // => "LLC"
+company.companySuffix(); // 'and Sons'
+```
+
+## Suffixes
+
+Returns an array with possible company name suffixes.
+
+**Returns:** string[]
+
+```ts
+// suffixes function
+company.suffixes(): string[]
+
+// import
+import { useFaker } from 'next-faker';
+
+const { company } = useFaker();
+
+// usage
+company.suffixes(); // => ["Inc","and Sons","LLC","Group"]
+company.suffixes(); // [ 'Inc', 'and Sons', 'LLC', 'Group' ]
+```
