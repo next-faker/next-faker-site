@@ -1,0 +1,109 @@
+# Database
+
+Module to generate database related entries.
+
+* Collation
+* Column
+* Engine
+* Mongodb Object Id
+* Type
+
+## Collation
+
+Returns a random database collation.
+
+**Returns:** string
+
+```ts
+// collation function
+database.collation(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { database } = useFaker();
+
+// usage
+database.collation(); // => "ascii_bin"
+database.collation(); // 'utf8_unicode_ci'
+```
+
+## Column
+
+Returns a random database column name.
+
+**Returns:** string
+
+```ts
+// column function
+database.column(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { database } = useFaker();
+
+// usage
+database.column(); // => "category"
+database.column(); // 'createdAt'
+```
+
+## Engine
+
+Returns a random database engine.
+
+**Returns:** string
+
+```ts
+// engine function
+database.engine(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { database } = useFaker();
+
+// usage
+database.engine(); // => "CSV"
+database.engine(); // 'ARCHIVE'
+```
+
+## Mongodb Object Id
+
+Returns a MongoDB [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) string.
+
+**Returns:** string
+
+```ts
+// mongodbObjectId function
+database.mongodbObjectId(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { database } = useFaker();
+
+// usage
+database.mongodbObjectId(); // => "cdfcdcbc9de896d1f58abbba"
+database.mongodbObjectId(); // 'e175cac316a79afdd0ad3afb'
+```
+
+## Type
+
+Returns a random database column type.
+
+**Returns:** string
+
+```ts
+// type function
+database.type(): string
+
+// import
+import { useFaker } from 'next-faker';
+
+const { database } = useFaker();
+
+// usage
+database.type(); // => "double"
+database.type(); // 'timestamp'
+```
